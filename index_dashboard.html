@@ -35,6 +35,18 @@
                     <li class="active">
                         <a href="#"><span class="fa fa-user mr-3"></span> Dashboard</a>
                     </li>
+                    <li class="serpomar-files">
+                        <a href="#">
+                            <span class="fa fa-user mr-3"></span> Serpomar Files
+                            <i class="fa fa-chevron-down"></i>
+                            <!-- Icono inicialmente hacia abajo -->
+                        </a>
+                        <ul class="select-dropdown">
+                            <li><a href="index_cocacola.html">Con. Coca-cola</a></li>
+                            <li><a href="index_kenwort.html">Operación Kenworth</a></li>
+                            <li><a href="index_isotanques.html">Inventario Isotanques Syngenta</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="https://theskyller30.github.io/CalculadorRecargos/" target="_blank"><span class="fa fa-briefcase mr-3"></span> Gestión Humana</a>
                     </li>
@@ -98,7 +110,39 @@
             </div>
         </div>
 
+        <script>
+            const serpomarFiles = document.querySelector('.serpomar-files');
+            const selectDropdown = serpomarFiles.querySelector('.select-dropdown');
+            const chevronIcon = serpomarFiles.querySelector('.fa-chevron-down');
 
+            let isExpanded = false;
+
+            // Toggle para expandir/contraer la lista desplegable
+            serpomarFiles.addEventListener('click', function(event) {
+                if (!isExpanded) {
+                    selectDropdown.style.display = 'block';
+                    chevronIcon.classList.add('expanded');
+                } else {
+                    selectDropdown.style.display = 'none';
+                    chevronIcon.classList.remove('expanded');
+                }
+
+                isExpanded = !isExpanded; // Cambia el estado
+                event.stopPropagation();
+            });
+
+            // Ocultar la lista desplegable cuando haces clic fuera de ella
+            document.addEventListener('click', function() {
+                selectDropdown.style.display = 'none';
+                chevronIcon.classList.remove('expanded');
+                isExpanded = false;
+            });
+
+            // Evitar que el clic en la lista desplegable cierre el menú
+            selectDropdown.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        </script>
 
 
         <script src="js/jquery.min.js"></script>

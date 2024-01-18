@@ -34,18 +34,20 @@
                     <li>
                         <a href="index_dashboard.html"><span class="fa fa-user mr-3"></span> Dashboard</a>
                     </li>
-                    <li class="serpomar-files">
-                        <a href="#">
-                            <span class="fa fa-user mr-3"></span> Serpomar Files
-                            <i class="fa fa-chevron-down"></i>
-                            <!-- Icono inicialmente hacia abajo -->
-                        </a>
-                        <ul class="select-dropdown">
-                            <li><a href="index_cocacola.html">Con. Coca-cola</a></li>
-                            <li><a href="index_kenwort.html">Operación Kenworth</a></li>
-                            <li><a href="index_isotanques.html">Inventario Isotanques Syngenta</a></li>
-                        </ul>
-                    </li>
+                    <div class="serpomar-files">
+                        <li class="active">
+                            <a href="#">
+                                <span class="fa fa-user mr-3"></span> Serpomar Files
+                                <i class="fa fa-chevron-down"></i>
+                                <!-- Icono inicialmente hacia abajo -->
+                            </a>
+                            <ul class="select-dropdown">
+                                <li><a href="index_cocacola.html">Con. Coca-cola</a></li>
+                                <li><a href="index_kenwort.html">Operación Kenworth</a></li>
+                                <li class="active"><a href="index_isotanques.html">Isotanques Syngenta</a></li>
+                            </ul>
+                        </li>
+                    </div>
 
 
                     <li>
@@ -93,60 +95,57 @@
 
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h1 class="mb-4"><b>¿Que es SocSerpomar?</b></h1>
+            <h1 class="mb-4"><b>Inventario contenedores en patio</b></h1>
             <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
                         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
                         border-radius: 8px; will-change: transform;">
-                <iframe loading="lazy" style="position: absolute; width: 100%; height:  100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF5x-kQBis&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height:  100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://lookerstudio.google.com/embed/reporting/6a7935d8-7931-4042-8106-9450860a9571/page/WSh5C" frameborder="0" style="border:0"
+                    allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" frameborder="0 " style="border:0 " allowfullscreen="allowfullscreen " allow="fullscreen ">
             </iframe>
             </div>
-            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF5x-kQBis&#x2F;view?utm_content=DAF5x-kQBis&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
 
+            <script>
+                const serpomarFiles = document.querySelector('.serpomar-files');
+                const selectDropdown = serpomarFiles.querySelector('.select-dropdown');
+                const chevronIcon = serpomarFiles.querySelector('.fa-chevron-down');
 
-        </div>
+                let isExpanded = false;
 
-        <script>
-            const serpomarFiles = document.querySelector('.serpomar-files');
-            const selectDropdown = serpomarFiles.querySelector('.select-dropdown');
-            const chevronIcon = serpomarFiles.querySelector('.fa-chevron-down');
+                // Toggle para expandir/contraer la lista desplegable
+                serpomarFiles.addEventListener('click', function(event) {
+                    if (!isExpanded) {
+                        selectDropdown.style.display = 'block';
+                        chevronIcon.classList.add('expanded');
+                    } else {
+                        selectDropdown.style.display = 'none';
+                        chevronIcon.classList.remove('expanded');
+                    }
 
-            let isExpanded = false;
+                    isExpanded = !isExpanded; // Cambia el estado
+                    event.stopPropagation();
+                });
 
-            // Toggle para expandir/contraer la lista desplegable
-            serpomarFiles.addEventListener('click', function(event) {
-                if (!isExpanded) {
-                    selectDropdown.style.display = 'block';
-                    chevronIcon.classList.add('expanded');
-                } else {
+                // Ocultar la lista desplegable cuando haces clic fuera de ella
+                document.addEventListener('click', function() {
                     selectDropdown.style.display = 'none';
                     chevronIcon.classList.remove('expanded');
-                }
+                    isExpanded = false;
+                });
 
-                isExpanded = !isExpanded; // Cambia el estado
-                event.stopPropagation();
-            });
-
-            // Ocultar la lista desplegable cuando haces clic fuera de ella
-            document.addEventListener('click', function() {
-                selectDropdown.style.display = 'none';
-                chevronIcon.classList.remove('expanded');
-                isExpanded = false;
-            });
-
-            // Evitar que el clic en la lista desplegable cierre el menú
-            selectDropdown.addEventListener('click', function(event) {
-                event.stopPropagation();
-            });
-        </script>
+                // Evitar que el clic en la lista desplegable cierre el menú
+                selectDropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            </script>
 
 
 
 
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+            <script src="js/jquery.min.js "></script>
+            <script src="js/popper.js "></script>
+            <script src="js/bootstrap.min.js "></script>
+            <script src="js/main.js "></script>
 </body>
 
 </html>

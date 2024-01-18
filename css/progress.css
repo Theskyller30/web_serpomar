@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+
+/* Oculta la lista desplegable por defecto */
+
+.select-dropdown {
+    display: none;
+}
+
 .progressx {
     text-align: center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

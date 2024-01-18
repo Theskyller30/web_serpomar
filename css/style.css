@@ -63,6 +63,33 @@ section {
     display: block;
 }
 
+.select-dropdown {
+    display: none;
+}
+
+
+/* Estilo para los íconos */
+
+
+/* Estilo para los íconos */
+
+
+/* Estilo para los íconos */
+
+.fa-chevron-down {
+    margin-left: auto;
+    /* Coloca el ícono a la derecha */
+    transition: transform 0.2s;
+    /* Agrega una transición suave */
+    transform-origin: center;
+    /* Define el punto de origen de la transformación en el centro */
+}
+
+.expanded .fa-chevron-down {
+    transform: rotate(180deg);
+    /* Gira el ícono hacia arriba cuando está expandido */
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
