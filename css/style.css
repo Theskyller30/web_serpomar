@@ -5,24 +5,29 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-:root {
-    --blue: #007bff;
+ :root {
+    --blue: #00BEFF;
+    /* Changed to bright blue from the logo */
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
-    --red: #dc3545;
+    --red: #FF0041;
+    /* Changed to vibrant red from the logo */
     --orange: #fd7e14;
     --yellow: #ffc107;
     --green: #28a745;
     --teal: #20c997;
     --cyan: #17a2b8;
-    --white: #fff;
+    --white: #FFFFFF;
+    /* Changed to white from the logo */
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #007bff;
+    --primary: #FF0041;
+    /* Changed to vibrant red from the logo */
     --secondary: #6c757d;
     --success: #28a745;
-    --info: #17a2b8;
+    --info: #00BEFF;
+    /* Changed to bright blue from the logo */
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
@@ -11022,7 +11027,8 @@ h5,
 #sidebar {
     min-width: 270px;
     max-width: 270px;
-    background: #3445b4;
+    background: linear-gradient(to right, blue, #0f98f8);
+    /* Degradado de gris a azul */
     color: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -11073,12 +11079,12 @@ h5,
 #sidebar ul li a {
     padding: 10px 0;
     display: block;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #sidebar ul li a span {
-    color: #44bef1;
+    color: white;
 }
 
 #sidebar ul li a:hover {
@@ -11146,7 +11152,7 @@ h5,
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    background: #3445b4;
+    background: #0f98f8;
     border-radius: 10px;
 }
 
@@ -11237,5 +11243,5 @@ a[data-toggle="collapse"] {
 }
 
 .subscribe-form .form-control {
-    background: #3b4ec6;
+    background: linear-gradient(to right, #0f98f8, gray);
 }
