@@ -1,0 +1,282 @@
+.vertical-menu li.active {
+    background-color: rgba(75, 105, 176, 0.5);
+    /* Color de resaltado */
+    color: white;
+    /* Color de texto en resaltado */
+    font-weight: bold;
+    /* Texto en negrita en resaltado */
+}
+
+.container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.icon-image {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    margin: 0 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.icon-image .icon img {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0396FF;
+}
+
+.icon-image::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+
+.icon-image .hover-image {
+    position: absolute;
+    height: 350px;
+    width: 300px;
+    bottom: 100px;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    pointer-events: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, z-index 0s, left 0.5s ease;
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.icon-image:hover .hover-image {
+    left: -200px;
+    z-index: 12;
+    transform: translateX(80px);
+    transition: left 0.5s ease, z-index 0s, transform 0.5s ease;
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.hover-image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 25px;
+}
+
+.hover-image .content1 {
+    position: absolute;
+    width: 100%;
+    bottom: -15px;
+    padding: 0 0px;
+}
+
+.content1::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    left: 50%;
+    bottom: -7px;
+    transform: rotate(45deg) translateX(-50%);
+    z-index: -1;
+    -webkit-transform: rotate(45deg) translateX(-50%);
+    -moz-transform: rotate(45deg) translateX(-50%);
+    -ms-transform: rotate(45deg) translateX(-50%);
+    -o-transform: rotate(45deg) translateX(-50%);
+}
+
+.content1 .details {
+    position: relative;
+    background: #dddddd;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+}
+
+.icon-image:hover .details {
+    transition: all 0.5s ease;
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: translateY(4px);
+    pointer-events: auto;
+}
+
+.details::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #dddddd;
+    left: 50%;
+    bottom: -15px;
+    transform: rotate(45deg) translateX(-50%);
+    z-index: -1;
+}
+
+.content1 .details .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content1 .details .job {
+    font-size: 17px;
+    color: #0396FF;
+    margin: -3px 0 5px 0;
+}
+
+.content1 .details a:hover {
+    color: #0396FF;
+}
+
+.container .last .hover-image {
+    transition: none;
+}
+
+.container .last:hover .hover-image {
+    transition: 0;
+}
+
+.last:hover .details {
+    transition-delay: 0s;
+}
+
+p {
+    text-align: center;
+    color: #1d1d1d;
+    font-size: 30px;
+}
+
+
+/* PARTE DOS */
+
+.container4 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples filas */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+}
+
+.card-1 {
+    --color: rgb(101, 101, 101);
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 180px 15px 160px;
+    grid-template-areas: "image" "text" "stats";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 250px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 40px;
+    border-radius: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #0073FF;
+}
+
+.card-image {
+    grid-area: image;
+    background: var(--image);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date {
+    color: var(--color);
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.card-text p {
+    color: grey;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.card-text h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: var(--color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card-stats .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+.card-stats .type {
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-stats .value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.img1 {
+    box-sizing: border-box;
+    padding-top: 8%;
+    width: 500x;
+    height: 690px;
+    padding-left: 25%;
+    padding-bottom: 4%;
+}
