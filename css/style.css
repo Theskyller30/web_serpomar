@@ -55,10 +55,16 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.imagencedi {
+    padding-top: 2%;
+    width: 800px;
+    height: 650px;
+}
+
 .titulo {
     color: #007bff;
-    padding-top: 30px;
-    padding-bottom: 30PX;
+    padding-top: 10px;
+    padding-bottom: 0PX;
     text-align: center;
 }
 
