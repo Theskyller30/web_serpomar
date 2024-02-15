@@ -55,6 +55,11 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
 .imagencedi {
     padding-top: 2%;
     width: 800px;
